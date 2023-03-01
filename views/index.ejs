@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>danh sach</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>danh sach</h1>
+    <a href="form-add"> <button>them</button></a><br>
+
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Mã Lớp Học</th>
+        <th>Tên Lớp</th>
+        <th>Số Lượng Sinh Viên</th>
+        <th>Mã Giảng Viên</th>
+        <th>action</th>
+      </tr>
+      <%  lops.forEach(item => { %>
+        <tr>
+          <td><%= item._id %></td>
+          <td><%= item.tenLop %></td>
+          <td><%= item.tenLop %></td>
+          <td><%= item.soLuong %></td>
+          <td><%= item.maGiangVien %></td>
+          <td><a href="/form-update"<%= item._id %>>Update</a></td>
+        </tr>
+       
+      <% }) %>
+      
+
+    </table>
+
+  </body>
+</html>
